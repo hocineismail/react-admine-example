@@ -12,7 +12,9 @@ import { List,
      TextInput, 
      LongTextInput, 
      Create,
-     Filter, } from 'react-admin';
+     Filter,
+     SimpleList,
+     Responsive } from 'react-admin';
 
      
 //Set Filter "search"  
@@ -28,14 +30,26 @@ const PostFilter = (props) => (
 //display posts
 export const PostList = props => (
     <List filters={<PostFilter />} {...props}>
-        <Datagrid >
-            <TextField source="id" />
-            <ReferenceField source="userId" reference="users">
-                <TextField source="name" />
-            </ReferenceField>            
-            <TextField source="title" />
-            <EditButton />
-        </Datagrid>
+         <Responsive
+            small={
+                <SimpleList
+                    primaryText={record => record.title}
+                    secondaryText={record => `${record.views} views`}
+                    tertiaryText={record => new Date(record.published_at).toLocaleDateString()}
+                />
+            }
+            medium={
+                <Datagrid>
+                    <TextField source="id" />
+                    <ReferenceField label="User" source="userId" reference="users">
+                        <TextField source="name" />
+                    </ReferenceField>
+                    <TextField source="title" />
+                    <TextField source="body" />
+                    <EditButton />
+                </Datagrid>
+            }
+        />
     </List>
 );
 
