@@ -1,7 +1,19 @@
 import React from 'react';
-import { List, Datagrid, TextField,EditButton, ReferenceField, ReferenceInput, DisabledInput, SimpleForm, Edit, SelectInput, TextInput, LongTextInput } from 'react-admin';
+import { List,
+     Datagrid, 
+     TextField,
+     EditButton,
+     ReferenceField,
+     ReferenceInput,
+     DisabledInput,
+     SimpleForm,
+     Edit,
+     SelectInput,
+     TextInput, 
+     LongTextInput, 
+     Create } from 'react-admin';
  
-
+//display posts
 export const PostList = props => (
     <List {...props}>
         <Datagrid >
@@ -14,6 +26,8 @@ export const PostList = props => (
         </Datagrid>
     </List>
 );
+
+//Edit post
 export const PostEdit = props => (
     <Edit {...props}>
         <SimpleForm>
@@ -27,3 +41,15 @@ export const PostEdit = props => (
     </Edit>
 );
  
+//create post
+export const PostCreate = props => (
+    <Create {...props}>
+        <SimpleForm>
+            <ReferenceInput source="userId" reference="users">
+                <SelectInput optionText="name" />
+            </ReferenceInput>
+            <TextInput source="title" />
+            <LongTextInput source="body" />
+        </SimpleForm>
+    </Create>
+);
