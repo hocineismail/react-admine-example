@@ -1,7 +1,7 @@
 
 # react-admine-example
 
-an Example how to build admin-panel using reac-admin
+an Example how to build admin-panel using react-admin
 
 ## Getting Started
 
@@ -38,7 +38,7 @@ You will also see any lint errors in the console.
 
 ## React-Admin Tutorial
 
-for more details how to use react-admin
+for more details how to use 
 [React-Admin Tutorial](https://marmelab.com/react-admin/Tutorial.html)
  
 
