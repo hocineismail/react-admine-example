@@ -5,6 +5,7 @@
   "dependencies": {
     "@material-ui/core": "^4.5.1",
     "@material-ui/icons": "^4.5.1",
+    "gh-pages": "^2.1.1",
     "prop-types": "^15.7.2",
     "ra-data-json-server": "^2.9.8",
     "react": "^16.11.0",
