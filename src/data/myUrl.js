@@ -1,8 +1,22 @@
 import React from 'react';
+import { withStyles } from '@material-ui/core/styles';
+import LaunchIcon from '@material-ui/icons/Launch';
 
-const MyUrl = ({ record = {}, source }) =>
-    <a href={record[source]}>
-        {record[source]}
-    </a>;
+const styles = {
+    link: {
+        textDecoration: 'none',
+    },
+    icon: {
+        width: '0.5em',
+        paddingLeft: 2,
+    },
+};
 
-export default MyUrl;
+
+const MyUrl = ({ record = {}, source, classes }) =>
+        <a href={record[source]} className={classes.link}>
+            {record[source]}
+            <LaunchIcon className={classes.icon} />
+        </a>;
+
+export default withStyles(styles)(MyUrl);
