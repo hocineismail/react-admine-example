@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/react-admine-example/static/css/main.34de6062.chunk.css",
+    "main.js": "/react-admine-example/static/js/main.29706c60.chunk.js",
+    "main.js.map": "/react-admine-example/static/js/main.29706c60.chunk.js.map",
+    "runtime-main.js": "/react-admine-example/static/js/runtime-main.020249c2.js",
+    "runtime-main.js.map": "/react-admine-example/static/js/runtime-main.020249c2.js.map",
+    "static/js/2.6e7d576b.chunk.js": "/react-admine-example/static/js/2.6e7d576b.chunk.js",
+    "static/js/2.6e7d576b.chunk.js.map": "/react-admine-example/static/js/2.6e7d576b.chunk.js.map",
+    "index.html": "/react-admine-example/index.html",
+    "precache-manifest.912c4147720c6bdb1a850f90f666e2f9.js": "/react-admine-example/precache-manifest.912c4147720c6bdb1a850f90f666e2f9.js",
+    "service-worker.js": "/react-admine-example/service-worker.js",
+    "static/css/main.34de6062.chunk.css.map": "/react-admine-example/static/css/main.34de6062.chunk.css.map"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.020249c2.js",
+    "static/js/2.6e7d576b.chunk.js",
+    "static/css/main.34de6062.chunk.css",
+    "static/js/main.29706c60.chunk.js"
+  ]
+}
