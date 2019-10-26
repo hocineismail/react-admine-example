@@ -1,7 +1,8 @@
 
 # react-admine-example
 
-an Example how to build admin-panel using react-admin
+an Example how to build admin-panel using react-admin <br />
+[Demo](https://hocineismail.github.io/react-admine-example)
 
 ## Getting Started
 
