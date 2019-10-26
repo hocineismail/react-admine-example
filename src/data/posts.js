@@ -11,11 +11,23 @@ import { List,
      SelectInput,
      TextInput, 
      LongTextInput, 
-     Create } from 'react-admin';
- 
+     Create,
+     Filter, } from 'react-admin';
+
+     
+//Set Filter "search"  
+const PostFilter = (props) => (
+    <Filter {...props}>
+        <TextInput label="Search" source="q" alwaysOn />
+        <ReferenceInput label="User" source="userId" reference="users" allowEmpty>
+            <SelectInput optionText="name" />
+        </ReferenceInput>
+    </Filter>
+);
+   
 //display posts
 export const PostList = props => (
-    <List {...props}>
+    <List filters={<PostFilter />} {...props}>
         <Datagrid >
             <TextField source="id" />
             <ReferenceField source="userId" reference="users">
@@ -27,9 +39,16 @@ export const PostList = props => (
     </List>
 );
 
+
+//Set the Title of post
+const PostTitle = ({ record }) => {
+    return <span>Post {record ? `"${record.title}"` : ''}</span>;
+};  
+
+
 //Edit post
 export const PostEdit = props => (
-    <Edit {...props}>
+    <Edit title={<PostTitle />} {...props}>
         <SimpleForm>
            <DisabledInput source="id" />
             <ReferenceInput source="userId" reference="users"> 
@@ -53,3 +72,4 @@ export const PostCreate = props => (
         </SimpleForm>
     </Create>
 );
+
